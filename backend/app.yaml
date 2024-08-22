@@ -2,11 +2,11 @@ runtime: python310
 entrypoint: gunicorn -b :$PORT run:app
 
 env_variables:
-  POSTGRES_DB_USERNAME: "mylagosflow-prod-db"
-  POSTGRES_DB_PASSWORD: ":f|3F6_jF[vR=QP5"
-  POSTGRES_DB_HOST: "cs-98195300968-default"
+  POSTGRES_DB_USERNAME: "postgres"
+  POSTGRES_DB_PASSWORD: "password"
+  POSTGRES_DB_HOST: "104.155.179.225"
   POSTGRES_DB_PORT: "5432"
-  POSTGRES_DB_NAME: "lagosflowpro"
+  POSTGRES_DB_NAME: "postgres"
   MAIL_SERVER: "smtp.gmail.com"
   MAIL_PORT: "587"
   MAIL_USE_TLS: "True"
