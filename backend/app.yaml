@@ -1,0 +1,24 @@
+runtime: python310
+entrypoint: gunicorn -b :$PORT run:app
+
+env_variables:
+  POSTGRES_DB_USERNAME: "mylagosflow-prod-db"
+  POSTGRES_DB_PASSWORD: ":f|3F6_jF[vR=QP5"
+  POSTGRES_DB_HOST: "cs-98195300968-default"
+  POSTGRES_DB_PORT: "5432"
+  POSTGRES_DB_NAME: "lagosflowpro"
+  MAIL_SERVER: "smtp.gmail.com"
+  MAIL_PORT: "587"
+  MAIL_USE_TLS: "True"
+  MAIL_USERNAME: "christianaoluwabunmi04@gmail.com"
+  MAIL_PASSWORD: "nfjz gljk pmuv fenn"
+  MAIL_DEFAULT_SENDER: "christianaoluwabunmi04@gmail.com"
+  OPENWEATHERMAP_API_KEY: "0b9cc0c3a26a71db94f472047fbce5c9"
+  TOMTOM_API_KEY: "im6zseHmxKJNbSCZRRIDYok6Iv0sACCS"
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /.*
+  script: auto
